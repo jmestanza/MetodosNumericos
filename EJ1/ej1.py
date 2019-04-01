@@ -5,7 +5,7 @@ from scipy.linalg import toeplitz
 L = 5
 ganancia = 1/10
 h = ganancia*(1+np.random.randn(L))
-sigma = 0.1
+sigma = 10
 a = plt.imread(("lena512.bmp"))
 M = len(a[:, 1])
 P = len(a[1, :])
@@ -16,7 +16,7 @@ H = toeplitz(h,np.zeros(M))
 r = np.zeros((M,P))
 N = sigma*np.random.randn(M,P)
 s = a
-r = H*s + N
+r = H.dot(s) + N
 b =(r.astype(int));
 plt.figure(1)
 plt.subplot(1,2,1)
