@@ -7,6 +7,7 @@ ganancia = 1/10
 h = ganancia*(1+np.random.randn(L))
 sigma = 10
 a = plt.imread(("lena512.bmp"))
+print(a)
 M = len(a[:, 1])
 P = len(a[1, :])
 z = np.zeros(M-L)
@@ -20,7 +21,7 @@ r = H.dot(s) + N
 b =(r.astype(int));
 plt.figure(1)
 plt.subplot(1,2,1)
-plt.imshow(a)
+plt.imshow(a,cmap='gray',vmin=1,vmax=255)
 plt.subplot(1,2,2)
-plt.imshow(b)
+plt.imshow(b,cmap='gray',vmin=1,vmax=255)
 plt.show()
