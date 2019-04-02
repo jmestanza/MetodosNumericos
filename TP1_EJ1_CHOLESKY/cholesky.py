@@ -60,6 +60,18 @@ def cholesky(a):
     else:
         return [False, False]
 
+
+def matProduct(a,b):
+    if len(a[0]) != len(b):
+        return False
+    else:
+        c = [[0 for x in range(len(b[0]))] for y in range(len(a))]
+        print("C= ",c)
+        for i in range(len(a)):
+            for j in range(len(b[0])):
+                for k in range(len(a[0])):
+                    c[i][j] += a[i][k] * b[k][j]
+        return c
 #------------------------------------------------------
 
 #------------------------------------------------------
@@ -91,5 +103,8 @@ g = gygt[0]
 gt = gygt[1]
 print ("g= ", g)
 print ("gt= ", gt)
+print ("aa= ", aa)
+print("matProduct:", a," * ", b, " = ", matProduct(g, gt))
+#g*gt no esta dando igual a la matriz inicial simetrica :(
 
 #isTransposeOf(bb)
