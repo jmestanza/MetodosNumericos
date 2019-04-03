@@ -6,60 +6,57 @@ import math
 def isSymmetric(a, tol=1e-8):
     #falta chequear si es de nxn
     return np.allclose(a, a.transpose(), atol=tol)
+def isEqual(a,b, tol=1e-8):
+    return np.allclose(a, b, atol=tol)
+
+
 def cholesky(a):
     if isSymmetric(a):
         w = len(a)
-        g = np.zeros((w,w))
-        for j in range(w):
-            sum = 0
-            for k in range(j - 1):
-                sum += ((g[j][k]) ** 2)
-            g[j][j] = math.sqrt(a[j][j] - sum)
-            j = j + 1
-        #-------------------------------
-            # iterate through rows
-        for i in range(w):
-            # iterate through columns
-            for j in range(i-1):
-                sum = 0
-                for k in range(j-1):
-                    sum += (g[i][k] * g[j][k])
-                g[i][j] = (a[i][j] - sum) / (g[j][j])
-                j = j + 1               #PUEDE SER QUE ESTO NO HAGA FALTA?
-            i = i + 1                   #PUEDE SER QUE ESTO NO HAGA FALTA?
+        n = w + 1
+        l = np.zeros((n,n))
+        sum1 = 0
+        sum2= 0
+        #p es i fila
+        #q es j columna
+        for j in range(1, n):  # j es columna
+            for i in range(j, n):  # esto esta bien
+                #esto esta bien
+                #----------------------------
+                if i==j:
+                    for k in range(1,i):
+                        sum1 += (l[i][k]) ** 2
+                    l[i][i] = (a[i - 1][i - 1] - sum1) ** (1 / 2)
+                    sum1 = 0
+                else:
+                    for k in range(1,j):
+                        sum2+=l[i][k]*l[j][k]
+                    l[i][j] = (a[i-1][j-1]-sum2)/(l[j][j])
+                    sum2 = 0
 
-        gt = g.transpose()
-        matArr = [g, gt]
-        return (matArr)
+        #estas borran los 0s sin utilizar para que sea adecuada la matriz
+        ans = l.copy()
+        ans = np.delete(ans,0,1)
+        ans = np.delete(ans,0,0)
+        return ans
     else:
-        return [False, False]
+        return None
 
 #------------------------------------------------------
 
-#------------------------------------------------------
+j = np.array([[25,15,-5,-10],
+              [15,10, 1,-7],
+              [-5,1 ,21, 4],
+              [-10,-7,4,18]])
 
-aa = np.array([[2, 3, 2],
-               [3, 5, 3],
-               [2, 3, 3]])
+c = cholesky(j)
+print("Cholesky obtenida:\n",c)
+L = np.linalg.cholesky(j)
+print("El resultado al que tengo que llegar es:\n",L)
+ans = "no"
+if isEqual(c,L):
+    ans = "sí"
+else:
+    ans = "no"
+print("el resultado "+ans+" es igual!!")
 
-a = np.array([[0, 0, 0],
-              [0, 0, 0]])
-
-b = np.array([[0, 1, 2],
-              [3, 4, 5]])
-
-bb = np.array([[0, 1, 2],
-               [3, 4, 5],
-               [6, 7, 8]])
-
-#print(isSymmetric(aa))
-
-bb = np.array([[0, 1, 2],
-               [3, 4, 5],
-               [6, 7, 8]])
-
-c = cholesky(aa)
-print("La primera matriz:\n",c[0])
-print("La segunda matriz:\n",c[1])
-#print("mat transpuesta:\n", b.transpose())
-#print("matProduct:\n", aa.dot(bb))

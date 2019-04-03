@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edf5fac9-c5f1-4b49-ad0e-a0023f4ea45c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../EJ1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EJ1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cholesky.py" beforeDir="false" afterPath="$PROJECT_DIR$/cholesky.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cholesky.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+            <state relative-caret-position="179">
+              <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -37,6 +37,8 @@
     <findStrings>
       <find>mathpro</find>
       <find>product</find>
+      <find>a[j]</find>
+      <find>a[i]</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,7 +144,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3250444" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -161,8 +163,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cholesky.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+        <state relative-caret-position="179">
+          <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
