@@ -1,7 +1,7 @@
 import numpy as np
 def isSymmetric(a, tol=1e-8):
     #falta chequear si es de nxn
-    return np.allclose(a, a.trxpose(), atol=tol)
+    return np.allclose(a, a.transpose(), atol=tol)
 
 
 def isEqual(a,b, tol=1e-8):
@@ -12,7 +12,6 @@ def is_pos_def(x):
     return np.all(np.linalg.eigvals(x) > 0)
 
 def cholesky(a):
-
     if isSymmetric(a) and is_pos_def(a):
         w = len(a)
         l = np.zeros((w,w)) # matriz de wxw
@@ -70,6 +69,7 @@ def solveEq(a,b):
     #hacemos cholesky
     L = cholesky(a)
     #primero resolvemos L y = b
-    y = backSubs(L,b)
+    y = ForwSubs(L,b)
     #luego resolvemos (L)t x = y
-    x = ForwSubs(L.trxpose(),y)
+    x = backSubs(L.transpose(),y)
+    return x

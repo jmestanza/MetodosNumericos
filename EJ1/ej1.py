@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.linalg import toeplitz
-
+from subs import *
 L = 5
 ganancia = 1/10
 h = ganancia*(1+np.random.randn(L))
@@ -18,9 +18,41 @@ N = sigma*np.random.randn(M,P)
 s = a
 r = H.dot(s) + N
 b =(r.astype(int));
-plt.figure(1)
-plt.subplot(1,2,1)
-plt.imshow(a,cmap='gray',vmin=1,vmax=255)
-plt.subplot(1,2,2)
-plt.imshow(b,cmap='gray',vmin=1,vmax=255)
-plt.show()
+# plt.figure(1)
+# plt.subplot(1,2,1)
+# plt.imshow(a,cmap='gray',vmin=1,vmax=255)
+# plt.subplot(1,2,2)
+# plt.imshow(b,cmap='gray',vmin=1,vmax=255)
+# plt.show()
+#------------------------------
+E = 1024;
+sE = np.random.uniform(256,1024,1)-1
+ME= len(sE[:, 1])
+PE= len(sE[1, :])
+h = ganancia*(1+np.random.randn(L))
+z = np.zeros(ME-L)
+HE=np.concatenate((h,z),axis=None)
+H = toeplitz(h,np.zeros(ME))
+rE= np.zeros((ME,PE))
+NE= sigma*np.random.randn(ME,PE)
+rE = HE.dot(sE) + NE
+S = toeplitz(sE.transpose())
+#S = S(:,1:L) # en octave dame todas las columnas de 1 a L
+S= S[:,0:L+1] # en python 0:L+1 incluye hasta L
+S = np.tril(S)
+he=solveEq(S,rE)
+#
+z= np.zeros(M-L)
+Heaux=np.concatenate((he,z),axis=None)
+He= toeplitz(Heaux,np.zeros(M))
+CN= (sigma**2)*np.eye(len(He))
+
+sigmax= (1/256*(sum( np.power (((range(0,255))-np.mean(range(0,255))),2))))**(1/2)
+mx= np.mean(range(0,255))*np.ones(M)
+CX= (sigmax**2)*np.eye(len(He))
+
+W = CX.dot(He.transpose())*np.linalg.inv((He.dot(CX)).dot(He.transpose)+CN)
+
+d = np.zeros((M,P));
+#for k = 1:P
+#    d(:,k) = W*(r(:,k)-He*mx)+mx;

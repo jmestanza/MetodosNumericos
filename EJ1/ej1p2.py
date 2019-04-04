@@ -21,4 +21,10 @@ rE = HE.dot(sE) + NE
 S = toeplitz(sE.transpose())
 #S = S(:,1:L) # en octave dame todas las columnas de 1 a L
 S= S[:,0:L+1] # en python 0:L+1 incluye hasta L
-S = np.tril(S);
+S = np.tril(S)
+he=solveEq(S,rE)
+#
+z= np.zeros(M-L)
+Heaux=np.concatenate((h,z),axis=None)
+He= toeplitz([he.’ zeros(M-L)],np.zeros(M));
+
