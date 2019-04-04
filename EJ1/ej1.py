@@ -26,7 +26,7 @@ b =(r.astype(int));
 # plt.show()
 #------------------------------
 E = 1024;
-sE = np.random.uniform(256,1024,1)-1
+sE = np.random.uniform(0,256,(1024,1))
 
 ME= len(sE[:, 1])
 PE= len(sE[1, :])
