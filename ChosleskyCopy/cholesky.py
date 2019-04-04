@@ -43,21 +43,69 @@ def cholesky(a):
         return l
     else:
         return None
-#------------------------------------------------------
+
+def backSubs(u,y):
+    # queremos resolver u x = y
+    # con a triangular superior
+    n=len(a)
+    ans =np.zeros(n)
+    sum = 0
+    for i in range(n-1,-1,-1): # n a 1
+        for j in range(i+1,n):
+            sum += x[j]*u[i][j]
+        ans[i]=(y[i]-sum)/u[i][i]
+        sum = 0
+    return ans
+
+def backSubs(u,y):
+    # queremos resolver u x = y
+    # con a triangular superior
+    n = len(a)
+    ans = np.zeros(n)
+    sum = 0
+    for i in range(n-1,-1,-1): # n a 1
+        for j in range(i+1,n):
+            sum += x[j]*u[i][j]
+        ans[i]=(y[i]-sum)/u[i][i]
+        sum = 0
+    return ans
+
+def ForwSubs(u,y):
+    # queremos resolver u x = y
+    # con u triangular inferior
+    n=len(a)
+    ans =np.zeros(n)
+    sum = 0
+    for i in range(0,n): # n a 1
+        for j in range(0,i):
+            sum += x[j]*u[i][j]
+        ans[i]=(y[i]-sum)/u[i][i]
+        sum = 0
+    return ans
+
 
 j = np.array([[25,15,-5,-10],
               [15,10, 1,-7],
               [-5,1 ,21, 4],
               [-10,-7,4,18]])
 
+# c = cholesky(j)
+# print("Cholesky obtenida:\n",c)
+# L = np.linalg.cholesky(j)
+# print("El resultado al que tengo que llegar es:\n",L)
+# ans = "no"
+# if isEqual(c,L):
+#     ans = "sí"
+# else:
+#     ans = "no"
+# print("el resultado "+ans+" es igual!!")
+a = np.array([3,1, 1,2])
 c = cholesky(j)
-print("Cholesky obtenida:\n",c)
-L = np.linalg.cholesky(j)
-print("El resultado al que tengo que llegar es:\n",L)
-ans = "no"
-if isEqual(c,L):
-    ans = "sí"
-else:
-    ans = "no"
-print("el resultado "+ans+" es igual!!")
 
+# x = np.linalg.solve(c.transpose(), b)
+# x2= backSubs(c.transpose(),b)
+x = np.linalg.solve(c, a)
+x2= ForwSubs(c,a)
+print(c)
+print(x)
+print(x2)
