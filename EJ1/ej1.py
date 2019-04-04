@@ -7,7 +7,6 @@ ganancia = 1/10
 h = ganancia*(1+np.random.randn(L))
 sigma = 10
 a = plt.imread(("lena512.bmp"))
-print(a)
 M = len(a[:, 1])
 P = len(a[1, :])
 z = np.zeros(M-L)
