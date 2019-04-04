@@ -27,6 +27,7 @@ b =(r.astype(int));
 #------------------------------
 E = 1024;
 sE = np.random.uniform(256,1024,1)-1
+
 ME= len(sE[:, 1])
 PE= len(sE[1, :])
 h = ganancia*(1+np.random.randn(L))
@@ -53,6 +54,17 @@ CX= (sigmax**2)*np.eye(len(He))
 
 W = CX.dot(He.transpose())*np.linalg.inv((He.dot(CX)).dot(He.transpose)+CN)
 
-d = np.zeros((M,P));
-#for k = 1:P
-#    d(:,k) = W*(r(:,k)-He*mx)+mx;
+d = np.zeros((M,P))
+for k in range(1,P+1):
+    #d(:,k) accede en octave a la columna k-esima
+    d[:, k-1] = W.dot((r[:, k-1])-He.dot(mx))+ mx
+d = d.astype(int)
+
+plt.figure(2)
+plt.subplot(1,3,1)
+plt.imshow(a,cmap='gray',vmin=1,vmax=255)
+plt.subplot(1,3,2)
+plt.imshow(b,cmap='gray',vmin=1,vmax=255)
+plt.subplot(1,3,2)
+plt.imshow(d,cmap='gray',vmin=1,vmax=255)
+plt.show()
