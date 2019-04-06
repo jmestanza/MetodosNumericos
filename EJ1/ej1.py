@@ -20,7 +20,7 @@ s = a.astype(float64)
 r = matmul(H,s) + N
 b = uint8(r)
 # #------------------------------
-E = 1024
+E = 32
 
 sE = np.random.uniform(1,255,size=(E,1))-1
 ME= len(sE[:, 0]) #cols
