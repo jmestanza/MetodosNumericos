@@ -1,52 +1,88 @@
+\section{Introducci\'on}
+Toda se\~nal enviada por un sistema de comunicaci\'on sufre perturbaciones durante el proceso de transmisi\'on, y es por eso que se desea reducir el error de la informaci\'on recibida.
+Un modelo discreto sencillo de un sistema de comunicaciones es el siguiente. Peri\'odicamente, cada T segundos el transmisor env\'ia un dato $s_k$ considerando como instante inicial a $t = 0$. Luego, la informaci\'on es modificada por el canal a través de su "respuesta impulsiva". Esto es la respuesta del sistema (en este caso, el canal) frente a una se\~nal de entrada en particular que se conoce como impulso unitario \'o delta de dirac. Matem\'aticamente, esto permite expresar la salida de un sistema en general como la convoluci\'on de su respuesta impulsiva con la se\~nal de entrada.
+A su vez, la señal transmitida es afectada por ruido blanco Gaussiano aditivo , donde $N_k \sim cN(0,\sigma)$. Entonces, peri\'odicamente la informaci\'on recibida es 
+
+\begin{equation*} 
+r_n = \sum_{k=0}^{L-1} h_k s_{n-k} + N_n 
+\end{equation*} 
+
+Donde $h$  es la respuesta impulsiva previamente mencionada. Matricialmente, esto se puede expresar de dos formas distintas:
+
+\begin{equation}  
+\vec{r} = H \vec{s} + \vec{N} 
+\label{eq: r=hs+n}
+\end{equation} 
+
+\begin{equation} 
+\vec{r} = S \vec{h} + \vec{N} 
+\label{eq: r=sh+n}
+\end{equation} 
+
+Siendo en todos los casos 
+\begin{itemize}
+	\item \textbf{h} referente a información del canal
+	\item \textbf{s} letras referente a información de la señal original
+	\item \textbf{n} referente al ruido agregado a la señal
+	\item \textbf{r} referente a la señal recibida
+\end{itemize}
+	
+%-------------------------------------------------------------------------------------------------------------------------
+
 \section{Estimaci\'on de la se\~nal enviada}
 
 Es necesario hacer una estimaci\'on de dos cosas distintas. Por un lado se debe estimar el canal ($\vec{h}$) y por otro lado, la imagen original  ($\vec{s}$).
 
-%-----------------------------------------------------------
+%----------------------------------------------
 \subsection{Estimaci\'on del canal de comunicaci\'on}
 
-Primero se hace una estimaci\'on de $\vec{h}$ con el m\'etodo de cuadrados m\'inimos, empleando la descomposici\'on de Cholesky, como se explica a continuaci\'on.  Para averiguar $\vec{h}$ a partir de la ecuaci\'on (REFERENCIAAAAAAAAAAAAAAA: r=hs+N), se considera que la media del ruido $N$ es cero, y as\'i se obtiene una nueva ecuaci\'on a partir de la cu\'al se aproceder\'a:
+Primero se hace una estimaci\'on de $\vec{h}$ con el m\'etodo de cuadrados m\'inimos, empleando la descomposici\'on de Cholesky, como se explica a continuaci\'on.  Para averiguar $\vec{h}$ a partir de la ecuaci\'on (\ref{eq: r=sh+n}), se considera que la media del ruido $N$ es cero, y as\'i se obtiene una nueva ecuaci\'on a partir de la cu\'al se aproceder\'a:
 
 \begin{equation} 
-\vec{r} = S \vec{h}  % (2)
+\vec{r} = S \vec{h}
+\label{eq: r=sh} 
 \end{equation} 
 
-Para utilizar el m\'etodo de Cholesky en una ecuaci\'on del tipo $\vec{b} = A \vec{h}$ es necesario que la matr\'iz $A$ sea cuadrada, sim\'etrica y definida positiva. Pero en nuestro caso,  en su lugar tenemos a la matr\'iz $S$ que no es  cuadrada. Como necesitamos una matr\'iz que cumpla estas condiciones, multiplicamos ambos lados de la ecuaci\'on (REFERENCIAAAAAA 2) por $S^T$:
+Para utilizar el m\'etodo de Cholesky en una ecuaci\'on del tipo $\vec{b} = A \vec{h}$ es necesario que la matr\'iz $A$ sea cuadrada, sim\'etrica y definida positiva. Pero en nuestro caso,  en su lugar tenemos a la matr\'iz $S$ que no es  cuadrada. Como necesitamos una matr\'iz que cumpla estas condiciones, multiplicamos ambos lados de la ecuaci\'on (\ref{eq: r=sh}) por $S^T$:
 
 \begin{equation} 
-S^T \vec{r} = S^T S \vec{h}  % (3)
+S^T \vec{r} = S^T S \vec{h} 
 \end{equation} 
 
 Llamamos  $S^T \vec{r} = \vec{b}$ y  $S^T S = A$, y obtenemos la expresi\'on:
 
 \begin{equation} 
-\vec{b} = A \vec{h}  % (4)
+\vec{b} = A \vec{h} 
+\label{eq: b=Ah} 
 \end{equation} 
 
-En esta nueva ecuaci\'on (REFERENCIAAAAAAAAAA 4), la matr\'iz A cumple con las caracter\'isticas para implementar el m\'etodo de Cholesky, el cual consiste en encontrar las matrices $L$ y $L^T$ triangulares, tales que $A = L L^T$; para simplificar la resoluci\'on de la ecuaci\'on. Una vez averiguadas las matrices  $L$ y $L^T$,en la ecuaci\'on (REFERENCIAAAAAAAAAA (4) reemplazamos la matr\'iz $A$ por el producto entre ellas y obtenemos:
+En esta nueva ecuaci\'on (\ref{eq: b=Ah}), la matr\'iz A cumple con las caracter\'isticas para implementar el m\'etodo de Cholesky, el cual consiste en encontrar las matrices $L$ y $L^T$ triangulares, tales que $A = L L^T$; para simplificar la resoluci\'on de la ecuaci\'on. Una vez averiguadas las matrices  $L$ y $L^T$,en la ecuaci\'on (\ref{eq: b=Ah}) reemplazamos la matr\'iz $A$ por el producto entre ellas y obtenemos:
 
 \begin{equation} 
-\vec{b} = L L^T \vec{h}  % (5)
+\vec{b} = L L^T \vec{h} 
+\label{eq: b=LLth}
 \end{equation} 
 
-Llamamos $\vec{y} = L^T \vec{h}$ y lo reemplazamos en la ecuaci\'on (REFERENCIAAAAAAA 5), de modo que:
+Llamamos $\vec{y} = L^T \vec{h}$ y lo reemplazamos en la ecuaci\'on (\ref{eq: b=LLth}), de modo que:
 
 \begin{equation} 
-\vec{b} = L \vec{y}  % (6)
+\vec{b} = L \vec{y}
+\label{eq: b=Ly}
 \end{equation} 
 
-A partir de la ecuaci\'on (REFERENCIAAAAAAA 6) obtenemos $ \vec{y}$ realizando sustitucci\'on Forward. Finralmente, dado que, como se mencion\'o previamente:
+A partir de la ecuaci\'on (\ref{eq: b=Ly}) obtenemos $ \vec{y}$ realizando sustitucci\'on Forward. Finralmente, dado que, como se mencion\'o previamente:
 
  \begin{equation} 
-\vec{y} = L^T \vec{h} %(8)
+\vec{y} = L^T \vec{h} 
+\label{eq: y=Lth}
 \end{equation}
 
-se despeja $\vec{h}$ de la ecuaci\'on (rEFERENCIAAAAAAAA 8) haciendo una sustituci\'on Backward. La ventaja de implementar el m\'etodo de Cholesky para la ecuaci\'on resuelta es que se terminan resolviendo dos ecuaciones en las que la matr\'iz involucrada (ya sea $L$ o $L^T$) es una matr\'iz triangulal.
+se despeja $\vec{h}$ de la ecuaci\'on (\ref{eq: y=Lth}) haciendo una sustituci\'on Backward. La ventaja de implementar el m\'etodo de Cholesky para la ecuaci\'on resuelta es que se terminan resolviendo dos ecuaciones en las que la matr\'iz involucrada (ya sea $L$ o $L^T$) es una matr\'iz triangulal.
 
-%-----------------------------------------------------------
+%----------------------------------------------
 \subsection{Estimaci\'on de la imagen original}
 
-La estimaci\'on de la imagen original $\vec{s}$, se hace a partir de la ecuaci\'on (REFERENCIAAAAAA R=hS+n), de una manera distinta a la implementada para la estimaci\'on de  $\vec{s}$. A pesar de que tambi\'en se realiza haciendo cuadrados m\'inimos, asumimos que el nivel de ruido es conocido y usamos otro m\'etodo  conocido como Linear Minimum Square Error (LMMSE). Si bien no es lo correcto, asumimos que las m\'inimas unidades transmitidas en la se\~nal enviada son independientes entre s\'i, simplemente para que la resoluci\'on sea m\'as sensilla. 
+La estimaci\'on de la imagen original $\vec{s}$, se hace a partir de la ecuaci\'on (\ref{eq: r=hs+n}), de una manera distinta a la implementada para la estimaci\'on de  $\vec{s}$. A pesar de que tambi\'en se realiza haciendo cuadrados m\'inimos, asumimos que el nivel de ruido es conocido y usamos otro m\'etodo  conocido como Linear Minimum Square Error (LMMSE). Si bien no es lo correcto, asumimos que las m\'inimas unidades transmitidas en la se\~nal enviada son independientes entre s\'i, simplemente para que la resoluci\'on sea m\'as sensilla. 
 
 
 %EN ALGUNA PARTE HAY QUE MENCIONAR QUE SE HACE UNA SECUENCIA DE ENTRENAMIENTO!!!!!!!!!!!!!!!!!!!!!%
