@@ -9,15 +9,15 @@ A su vez, la señal transmitida es afectada por ruido blanco Gaussiano aditivo ,
 r_n = \sum_{k=0}^{L-1} h_k s_{n-k} + N_n 
 \end{equation*} 
 
-Donde $h$  es la respuesta impulsiva previamente mencionada. Matricialmente, esto se puede expresar de dos formas distintas
+Donde $h$  es la respuesta impulsiva previamente mencionada. Matricialmente, esto se puede expresar de dos formas distintas:
 
-\begin{equation*}  
+\begin{equation}  
 \vec{r} = H \vec{s} + \vec{N} 
-\end{equation*} 
+\end{equation} 
 
-\begin{equation*} 
+\begin{equation} 
 \vec{r} = S \vec{h} + \vec{N} 
-\end{equation*} 
+\end{equation} 
 
 Siendo en todos los casos 
 \begin{itemize}
@@ -27,47 +27,3 @@ Siendo en todos los casos
 	\item \textbf{r} referente a la señal recibida
 \end{itemize}
 	
-
-\section{Estimación de la imagen original}
-
-
-Se env\'ia la imagen de Lena con un ruido de un desv\'io est\'andar de 1. A continuaci\'on se observan los resultados de la transmisi\'on de la imagen de Lena en escala de grises.
- 
- 
-\begin{figure}
-\includegraphics[scale=0.9]{Imagenes/E32S01}
-\centering
-\caption{Resultados caso $E=32$ $\sigma = 1$ }
-\end{figure}
- 
-\begin{figure}
-\includegraphics[scale=0.9]{Imagenes/E32S10}
-\centering
-\caption{Resultados caso $E=32$ $\sigma = 10$ }
-\end{figure}
-
-\begin{figure}
-\includegraphics[scale=0.9]{Imagenes/E32S100}
-\centering
-\caption{Resultados caso $E=32$ $\sigma = 100$ }
-\end{figure}
-
-\begin{figure}
-\includegraphics[scale=0.9]{Imagenes/E1024S01}
-\centering
-\caption{Resultados caso $E=1024$ $\sigma = 1$ }
-\end{figure}
-
-\begin{figure}
-\includegraphics[scale=0.9]{Imagenes/E1024S10}
-\centering
-\caption{Resultados caso $E=1024$ $\sigma = 10$ }
-\end{figure}
-
-\begin{figure}
-\includegraphics[scale=0.9]{Imagenes/E1024S100}
-\centering
-\caption{Resultados caso $E=1024$ $\sigma = 100$ }
-\end{figure}
-
-%\end{document}
