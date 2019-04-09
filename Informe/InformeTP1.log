@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.24)  8 APR 2019 23:30
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.24)  8 APR 2019 23:39
+>>>>>>> f6d474dea442129b5339d115cc549cfc14269e30
 entering extended mode
 **./InformeTP1.tex
 (InformeTP1.tex
@@ -1254,36 +1258,44 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 24.
+<<<<<<< HEAD
  [2]
 <Imagenes/E32S01.png, id=18, 462.528pt x 143.0946pt>
+=======
+
+[2]
+<Imagenes/E32S01.png, id=18, 462.528pt x 205.2468pt>
+>>>>>>> f6d474dea442129b5339d115cc549cfc14269e30
 File: Imagenes/E32S01.png Graphic file (type png)
 <use Imagenes/E32S01.png>
 Package pdftex.def Info: Imagenes/E32S01.png  used on input line 93.
-(pdftex.def)             Requested size: 416.27133pt x 128.78394pt.
-<Imagenes/E32S10.png, id=20, 462.528pt x 146.7081pt>
+(pdftex.def)             Requested size: 462.52686pt x 205.24628pt.
+<Imagenes/E32S10.png, id=20, 462.528pt x 198.7425pt>
 File: Imagenes/E32S10.png Graphic file (type png)
 <use Imagenes/E32S10.png>
-Package pdftex.def Info: Imagenes/E32S10.png  used on input line 99.
-(pdftex.def)             Requested size: 416.27133pt x 132.03606pt.
+Package pdftex.def Info: Imagenes/E32S10.png  used on input line 98.
+(pdftex.def)             Requested size: 462.52686pt x 198.742pt.
  [3 <./Imagenes/E32S01.png>]
-<Imagenes/E32S100.png, id=25, 462.528pt x 145.2627pt>
+<Imagenes/E32S100.png, id=25, 461.0826pt x 200.9106pt>
 File: Imagenes/E32S100.png Graphic file (type png)
 <use Imagenes/E32S100.png>
-Package pdftex.def Info: Imagenes/E32S100.png  used on input line 105.
-(pdftex.def)             Requested size: 416.27133pt x 130.7352pt.
-<Imagenes/E1024S01.png, id=26, 462.528pt x 145.9854pt>
+Package pdftex.def Info: Imagenes/E32S100.png  used on input line 103.
+(pdftex.def)             Requested size: 461.08147pt x 200.9101pt.
+<Imagenes/E1024S01.png, id=26, 461.8053pt x 198.0198pt>
 File: Imagenes/E1024S01.png Graphic file (type png)
 <use Imagenes/E1024S01.png>
-Package pdftex.def Info: Imagenes/E1024S01.png  used on input line 111.
-(pdftex.def)             Requested size: 416.27133pt x 131.38564pt.
-<Imagenes/E1024S10.png, id=27, 462.528pt x 151.767pt>
+Package pdftex.def Info: Imagenes/E1024S01.png  used on input line 108.
+(pdftex.def)             Requested size: 461.80415pt x 198.01932pt.
+<Imagenes/E1024S10.png, id=27, 462.528pt x 197.2971pt>
 File: Imagenes/E1024S10.png Graphic file (type png)
 <use Imagenes/E1024S10.png>
-Package pdftex.def Info: Imagenes/E1024S10.png  used on input line 117.
-(pdftex.def)             Requested size: 416.27133pt x 136.58902pt.
-<Imagenes/E1024S100.png, id=28, 460.3599pt x 147.4308pt>
+Package pdftex.def Info: Imagenes/E1024S10.png  used on input line 113.
+(pdftex.def)             Requested size: 462.52686pt x 197.29662pt.
+ [4 <./Imagenes/E32S10.png> <./Imagenes/E32S100.png> <./Imagenes/E1024S01.png>]
+<Imagenes/E1024S100.png, id=34, 461.8053pt x 198.0198pt>
 File: Imagenes/E1024S100.png Graphic file (type png)
 <use Imagenes/E1024S100.png>
+<<<<<<< HEAD
 Package pdftex.def Info: Imagenes/E1024S100.png  used on input line 123.
 (pdftex.def)             Requested size: 414.32007pt x 132.68648pt.
  [4 <./Imagenes/E32S10.png> <./Imagenes/E32S100.png> <./Imagenes/E1024S01.png> 
@@ -1306,6 +1318,29 @@ s/type1/adobe/utopia/putb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/
 utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a
 .pfb>
 Output written on InformeTP1.pdf (5 pages, 578620 bytes).
+=======
+Package pdftex.def Info: Imagenes/E1024S100.png  used on input line 118.
+(pdftex.def)             Requested size: 461.80415pt x 198.01932pt.
+) [5 <./Imagenes/E1024S10.png> <./Imagenes/E1024S100.png>] (InformeTP1.aux) ) 
+Here is how much of TeX's memory you used:
+ 21788 strings out of 492945
+ 442702 string characters out of 3135504
+ 651615 words of memory out of 3000000
+ 25052 multiletter control sequences out of 15000+200000
+ 107751 words of font info for 197 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 66i,7n,67p,9114b,308s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C
+:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/newtonis/AppDa
+ta/Roaming/MiKTeX/2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/newt
+onis/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/fourier/fourier-ml.pfb><C:/U
+sers/newtonis/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/fourier/fourier-mli
+t.pfb><C:/Users/newtonis/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/fourier/
+fourier-ms.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on InformeTP1.pdf (5 pages, 862519 bytes).
+>>>>>>> f6d474dea442129b5339d115cc549cfc14269e30
 PDF statistics:
  63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
