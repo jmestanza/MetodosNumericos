@@ -5,9 +5,13 @@ from matplotlib.pyplot import *
 from scipy.linalg import toeplitz
 from numpy.linalg import inv
 
+#asignamos "yes" a wanttoshow si queremos mostrar en pantalla todos los casos
 wanttoshow = "no"
-Evec = [32,1024]
-sigmavec = [0,0.1,10,20,50,100]
+#Evec = [32,1024]
+#sigmavec = [0,0.1,10,20,50,100]
+Evec = [32]
+sigmavec =[10]
+
 for i in range(len(Evec)):
     for j in range(len(sigmavec)):
         E=Evec[i]
@@ -48,6 +52,9 @@ for i in range(len(Evec)):
 
         he=solveEq(matmul(St,S),matmul(St,rE))
 
+        #comparo h con hE
+        compareh= [h,he]
+        print(compareh)
         He= toeplitz(concatenate((he,zeros(M-L-1)),axis=None),zeros(M))
 
         CN= (sigma**2)*eye(len(He))
