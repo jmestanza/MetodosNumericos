@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.24)  8 APR 2019 23:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.24)  9 APR 2019 11:51
 entering extended mode
 **./InformeTP1.tex
 (InformeTP1.tex
@@ -1335,7 +1335,7 @@ Package pdftex.def Info: Imagenes/E1024S100.png  used on input line 118.
 ) [5 <./Imagenes/E1024S10.png> <./Imagenes/E1024S100.png>] (InformeTP1.aux) ) 
 Here is how much of TeX's memory you used:
  21788 strings out of 492945
- 442702 string characters out of 3135504
+ 442698 string characters out of 3135504
  651615 words of memory out of 3000000
  25052 multiletter control sequences out of 15000+200000
  107751 words of font info for 197 fonts, out of 3000000 for 9000
@@ -1350,7 +1350,7 @@ t.pfb><C:/Users/newtonis/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/fourier/
 fourier-ms.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on InformeTP1.pdf (5 pages, 861261 bytes).
+Output written on InformeTP1.pdf (5 pages, 861508 bytes).
 PDF statistics:
  63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
