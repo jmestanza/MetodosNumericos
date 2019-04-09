@@ -43,7 +43,7 @@ def backSubs(u,y):
     n = len(u)
     x = np.zeros(n)
     sum = 0
-    for i in range(n-1,-1,-1): # n a 1
+    for i in range(n-1,-1,-1): # [n-1,0]
         for j in range(i+1,n):
             sum += x[j]*u[i][j]
         x[i]=(y[i]-sum)/u[i][i]
