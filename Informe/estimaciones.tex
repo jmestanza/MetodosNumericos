@@ -121,6 +121,12 @@ Para ver como funciona todo lo explicado hasta aqu\'i, se env\'ia la imagen de L
 
 %explicar los resultados haciendo comparaciones entre los resultados y la imagen real, y entre los resultados y el ruido y entre los resultados distintos debiedo a la variable que se fue cambiando.
 
-En base a los resultados obtenidos, se puede establecer una relaci\'on 
-entre la dispersi\'on del ruido y la imagen recuperada respecto de la original. Para una misma longitud de entrenamiento, si el ruido presente en el canal posee mayor dispersi\'on, quiere decir que puede tomar una distribuci\'on de valores m\'as amplia. Por ello, resulta m\'as dificultoso recuperar la informaci\'on original de la imagen si aletar, y a la salida se la ve afectada por el ruido en mayor medida en cuanto $\sigma$ aumenta.
-
+\section{Conclusión - análisis de imágenes}
+Tras ascender la desviación estándar del ruido gaussiano, provoca que el estimador resultante sea
+muy distinto respecto de la señal original. Aunque los efectos impulsivos se puedan cuantificar con
+una señal de prueba, estos no están aislados del ruido Gaussiano, y por ende genera desviaciones
+agregadas además del Nk en sí que son difíciles de solventar, aún asumiendo conocido el nivel de
+ruido. Por otro lado, el efecto de aumentar el E no afecta demasiado, por lo menos en el rango
+estudiado. Sí puede apreciarse de todas maneras, que tras un incremento en la cantidad de datos
+aumenta el error cuadrático medio y por ende la imagen original tiene a distinguirse más de la
+recuperada por el estimador.
