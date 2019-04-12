@@ -5,8 +5,8 @@ from matplotlib.pyplot import *
 from scipy.linalg import toeplitz
 from numpy.linalg import inv
 
-E = 32
-sigma = 0.1
+E = 512
+sigma = 1
 L = 5
 ganancia = 1/10
 h = ganancia*(1+randn(1,L))
