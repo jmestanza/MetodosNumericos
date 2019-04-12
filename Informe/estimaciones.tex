@@ -2,12 +2,12 @@
 Toda se\~nal enviada por un sistema de comunicaci\'on sufre perturbaciones durante el proceso de transmisi\'on, y es por eso que se desea reducir el error de la informaci\'on recibida.
 Un modelo discreto sencillo de un sistema de comunicaciones es el siguiente. Peri\'odicamente, cada T segundos el transmisor env\'ia un dato $s_k$ considerando como instante inicial a $t = 0$. Para los objetivos de este trabajo, se clasifican dos tipos de errores de distinta naturaleza asociados al proceso de transmisi\'on: error sistemático de respuesta impulsiva del canal (el cual depende del medio donde la información se propaga y de la se\~nal), y ruido blanco gaussiano que agrega incertezas que no podemos mejorar. El objetivo entonces es el de recuperar la se\~nal original, teniendo que:
 \begin{enumerate}
-	\item Cuantificar los errores vinculados.
-	\item Dar un estimador que se aproxime lo más que se pueda a la se\~nal original.
-	\item Resolver sistemas de ecuaciones lineales eficientemente para as\'i evitar errores num\'ericos (como redondeo, esto \'ultimo se debe a que la computadora tiene una representaci\'on finita de n\'umeros reales).
+	\item cuantificar los errores vinculados,
+	\item dar un estimador que se aproxime lo más que se pueda a la se\~nal original,
+	\item y resolver sistemas de ecuaciones lineales eficientemente para as\'i evitar errores num\'ericos (como redondeo, esto \'ultimo se debe a que la computadora tiene una representaci\'on finita de n\'umeros reales).
 \end{enumerate}
 
- Modelamos el problema como sigue: La informaci\'on es modificada por el canal a través de su "respuesta impulsiva". Esto es la respuesta del sistema (en este caso, el canal) frente a una se\~nal de entrada en particular que se conoce como impulso unitario \'o delta de dirac. Matem\'aticamente, esto permite expresar la salida de un sistema en general como la convoluci\'on de su respuesta impulsiva con la se\~nal de entrada.
+ Modelamos el problema como sigue (para sistemas LTI): La informaci\'on es modificada por el canal a través de su "respuesta impulsiva". Esto es la respuesta del sistema (en este caso, el canal) frente a una se\~nal de entrada en particular que se conoce como impulso unitario \'o delta de dirac. Matem\'aticamente, esto permite expresar la salida de un sistema en general como la convoluci\'on de su respuesta impulsiva con la se\~nal de entrada.
 A su vez, la señal transmitida es afectada por ruido blanco Gaussiano aditivo , donde $N_k \sim cN(0,\sigma)$. Entonces, peri\'odicamente la informaci\'on recibida es 
 
 \begin{equation*} 
@@ -34,7 +34,7 @@ Siendo en todos los casos
 	\item \textbf{r} referente a la se\~nal recibida
 \end{itemize}
 	
-Adem\'as, puede observarse que como la se\~nal recibida es una variable aleatoria, dado que el ruido gaussiano es aleatorio y no hay manera de conocer la respuesta impulsiva con precisi\'on infinita; debe elegirse adecuadamente el estimador de Sk de manera tal de minimizar el error – cuantific\'andose por el m\'etodo de cuadrados m\'inimos de estad\'istica.
+Adem\'as, puede observarse que como la se\~nal recibida es una variable aleatoria, dado que el ruido gaussiano es aleatorio y no hay manera de conocer la respuesta impulsiva con precisi\'on infinita; debe elegirse adecuadamente el estimador de $S_k$ de manera tal de minimizar el error – cuantific\'andose por el m\'etodo de cuadrados m\'inimos de estad\'istica.
 
 \begin{figure}[H]
 	\includegraphics[scale=0.15]{Imagenes/sistema}
@@ -43,7 +43,7 @@ Adem\'as, puede observarse que como la se\~nal recibida es una variable aleatori
 	\label{sistema}
 \end{figure}
 
-Como se puede ver en la Figura \ref{sistema}, se recibe una se\~nal Rk como respuesta a una se\~nal enviada Sk. Como es transmisor tiene errores de dos tipos, adem\'as del correspondiente estimador es necesario acotar el error.
+Como se puede ver en la Figura \ref{sistema}, se recibe una se\~nal $R_k$ como respuesta a una se\~nal enviada $S_k$. Como el transmisor tiene errores de dos tipos, adem\'as del correspondiente estimador es necesario acotar el error.
 
 %-------------------------------------------------------------------------------------------------------------------------
 \section{Estimaci\'on de la se\~nal enviada}
@@ -60,7 +60,7 @@ Primero se hace una estimaci\'on de $\vec{h}$ con el m\'etodo de cuadrados m\'in
 \min_{\forall h \in R^L}  || S \vec{h} – \vec{r}  ||
 \label{eq: min}
 \end{equation}
-Por lo que se env\'ia una secuencia conocida de S de prueba para cuantificar el error sistem\'atico impulsivo sobre la se\~nal original. La norma de la ecuaci\'on \ref{eq: min} es norma dos. Se aclara que se realiza una aproximaci\'on, se busca el vector $\vec{h}$ que minimiza ese error — pero como el sistema est\'a influenciado por un proceso estoc\'astico nunca se va a hallar la respuesta impulsiva exacta (que depende del material y de la se\~nal enviada).
+Por lo que se env\'ia una secuencia conocida de $S$ de prueba para cuantificar el error sistem\'atico impulsivo sobre la se\~nal original. La norma de la ecuaci\'on \ref{eq: min} es norma dos. Se aclara que se realiza una aproximaci\'on, se busca el vector $\vec{h}$ que minimiza ese error — pero como el sistema est\'a influenciado por un proceso estoc\'astico nunca se va a hallar la respuesta impulsiva exacta (que depende del material y de la se\~nal enviada).
 Teniendo esto \'ultimo en cuenta, consideramos entonces la ecuaci\'on:
 
 
@@ -84,7 +84,7 @@ Llamamos  $S^T \vec{r} = \vec{b}$ y  $S^T S = A$, y obtenemos la expresi\'on:
 \label{eq: b=Ah} 
 \end{equation} 
 
-En esta nueva ecuaci\'on (\ref{eq: b=Ah}), la matriz A la conforma el producto que $S^T$ por $S$, por lo que ahora además de ser cuadrada se muestra factorizada por matrices triangulares; por consiguiente se cumplen las hipótesis de Cholesky y A es definida positiva para toda señal que se escriba de la forma que previamente se definió en el marco teórico del sistema. Para implementar este m\'etodo, el cual consiste en encontrar las matrices $L$ y $L^T$ triangulares, tales que $A = L L^T$, para simplificar la resoluci\'on de la ecuaci\'on. Una vez averiguadas las matrices  $L$ y $L^T$,en la ecuaci\'on (\ref{eq: b=Ah}) reemplazamos la matriz $A$ por el producto entre ellas y obtenemos:
+En esta nueva ecuaci\'on (\ref{eq: b=Ah}), la matriz A la conforma el producto que $S^T$ por $S$, por lo que ahora además de ser cuadrada, la norma usual definida por la matriz $S S^T$ es siempre mayor a cero dado que los bits de Lena resultan ser as\'i. Por consiguiente, se cumplen las hipótesis de Cholesky y $A$ es definida positiva para toda señal que se escriba de la forma que previamente se definió en el marco teórico del sistema. Para implementar este m\'etodo, el cual consiste en encontrar las matrices $L$ y $L^T$ triangulares, tales que $A = L L^T$, para simplificar la resoluci\'on de la ecuaci\'on. Una vez averiguadas las matrices  $L$ y $L^T$,en la ecuaci\'on (\ref{eq: b=Ah}) reemplazamos la matriz $A$ por el producto entre ellas y obtenemos:
 
 \begin{equation} 
 \vec{b} = L L^T \vec{h} 
@@ -111,8 +111,22 @@ se despeja $\vec{h}$ de la ecuaci\'on (\ref{eq: y=Lth}) haciendo una sustituci\'
 \subsection{Estimaci\'on de la imagen original}
 Una vez usada la secuencia de entrenamiento para tener un estimador para la respuesta impulsiva H, se procede a minimizar el error cuadrático medio del estimador de la imagen de Lena. La estimaci\'on de la imagen original $\vec{s}$, se hace a partir de la ecuaci\'on (\ref{eq: r=hs+n}), de una manera distinta a la implementada para la estimaci\'on de  $\vec{h}$. A pesar de que tambi\'en se realiza haciendo cuadrados m\'inimos, asumimos que el nivel de ruido es conocido y usamos otro m\'etodo  conocido como Linear Minimum Square Error (LMMSE); donde las deducciones de las f\'ormulas que se usan para hallar el estimador vienen de plantear una suerte de regresi\'on lineal; y luego buscar maximizar la probabilidad seg\'un Maximum Likelihood Estimation (si se modela con Estad\'istica Cl\'asica o Frecuentista) o Maximum a Posteriori Probability Estimation (si se modela con Estad\'istica Bayesiana).  Si bien no es lo correcto, asumimos que las m\'inimas unidades transmitidas en la se\~nal enviada son independientes entre s\'i, simplemente para que la resoluci\'on sea m\'as sencilla. 
 
-Para ver como funciona todo lo explicado hasta aqu\'i, se env\'ia la imagen de Lena con un ruido de un desv\'io est\'andar de 1. A continuaci\'on se observan los resultados de la transmisi\'on de la imagen de Lena en escala de grises.
+Para ver c\'omo funciona todo lo explicado hasta aqu\'i, se env\'ia la imagen de Lena con un ruido de un desv\'io est\'andar que se va variando para cada experimento,, y para dos valores de $E$ distintos. Siendo $E$ la longitud de la secuencia de entrenamiento. A continuaci\'on se observan los resultados de la transmisi\'on de la imagen de Lena en escala de grises.
+
+\begin{figure}[H]
+	\includegraphics[scale=1.5]{Imagenes/1}
+	\centering
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[scale=1.5]{Imagenes/2}
+	\centering
+\end{figure}
  
+\begin{figure}[H]
+	\includegraphics[scale=1]{Imagenes/E32S00}
+	\centering
+\end{figure}
 
 \begin{figure}[H]
 	\includegraphics[scale=1]{Imagenes/E32S01}
@@ -125,7 +139,22 @@ Para ver como funciona todo lo explicado hasta aqu\'i, se env\'ia la imagen de L
 \end{figure}
 
 \begin{figure}[H]
+	\includegraphics[scale=1]{Imagenes/E32S20}
+	\centering
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[scale=1]{Imagenes/E32S50}
+	\centering
+\end{figure}
+
+\begin{figure}[H]
 \includegraphics[scale=1]{Imagenes/E32S100}
+\centering
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[scale=1]{Imagenes/E1024S00}
 \centering
 \end{figure}
 
@@ -140,6 +169,16 @@ Para ver como funciona todo lo explicado hasta aqu\'i, se env\'ia la imagen de L
 \end{figure}
 
 \begin{figure}[H]
+\includegraphics[scale=1]{Imagenes/E1024S20}
+\centering
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[scale=1]{Imagenes/E1024S50}
+\centering
+\end{figure}
+
+\begin{figure}[H]
 \includegraphics[scale=1]{Imagenes/E1024S100}
 \centering
 \end{figure}
@@ -147,14 +186,13 @@ Para ver como funciona todo lo explicado hasta aqu\'i, se env\'ia la imagen de L
 %explicar los resultados haciendo comparaciones entre los resultados y la imagen real, y entre los resultados y el ruido y entre los resultados distintos debiedo a la variable que se fue cambiando.
 
 \section{Conclusi\'on - An\'alisis de im\'agenes}
-Tras ascender la desviaci\'on est\'andar del ruido gaussiano, provoca que el estimador resultante sea muy distinto respecto de la se\~nal original. Aunque los efectos impulsivos se puedan cuantificar con una se\~nal de prueba, estos no est\'an aislados del ruido Gaussiano, y por ende genera desviaciones agregadas adem\'as del Nk en s\'i que son dif\'iciles de solventar, aun asumiendo conocido el nivel de ruido. La ventaja entonces del uso de la se\~nal de entrenamiento es aprovecharse del hecho de que, como la respuesta impulsiva hk depende del medio de comunicaci\'on (con su par\'ametro de longitud) y la se\~nal que con cada experimento no cambia (enti\'endase por experimento a cuando se genera un solo h particular, que vendr\'ia a estar asociado a cambiar el medio y la se\~nal), quiere decir que hk es determinista y el aporte aleatorio viene dado por Nk. Esto explica el efecto de por qu\'e tras aumentar la longitud del material E no afecta demasiado en comparaci\'on a cambiar el desv\'io est\'andar del ruido gaussiano, por lo menos en el rango estudiado. Sí puede apreciarse de todas maneras, que acrecentar el E conlleva a aumenta el error cuadr\'atico medio y por ende la imagen original tiende a distinguirse a\'un m\'as de la recuperada por el estimador.
+Tras ascender la desviaci\'on est\'andar del ruido gaussiano, provoca que el estimador resultante sea muy distinto respecto de la se\~nal original. Aunque los efectos impulsivos se puedan cuantificar con una se\~nal de prueba, estos no est\'an aislados del ruido Gaussiano, y por ende genera desviaciones agregadas adem\'as del $N_k$ en s\'i que son dif\'iciles de solventar, aun asumiendo conocido el nivel de ruido. La ventaja entonces del uso de la se\~nal de entrenamiento es aprovecharse del hecho de que, como la respuesta impulsiva $h_k$ depende del medio de comunicaci\'on (con su par\'ametro de longitud) y la se\~nal que con cada experimento no cambia (enti\'endase por experimento a cuando se genera un solo h particular, que vendr\'ia a estar asociado a cambiar el medio y la se\~nal), quiere decir que $h_k$ es determinista y el aporte aleatorio viene dado por $N_k$. Esto explica el efecto de por qu\'e tras aumentar la cantidad de informaci\'on, $E$, no afecta demasiado en comparaci\'on a cambiar el desv\'io est\'andar del ruido gaussiano, por lo menos en el rango estudiado. Sí puede apreciarse de todas maneras, que acrecentar el $E$ conlleva a aumenta el error cuadr\'atico medio y por ende la imagen original tiende a distinguirse a\'un m\'as de la recuperada por el estimador. 
 
 \section{Anexo}
 A continuaci\'on se presenta el c\'odigo empleado para realizar las estimaciones y graficar las imagenes de este trabajo. 
-Aclaraci\'on: en utils.py se encuentran las funciones que hab\'ia que implementar.
+Aclaraci\'on: en utils.py se encuentran las funciones que hab\'ia que implementar. Se adjuntan tambi\'en los .py del c\'odigo que se muestran a continuaci\'on. En caso de ejecutarlo, es necesario correr ej1.py teniendo en el mismo directorio utils.py y lena.bmp.
 
 
-%\begin{verbatim}
 \begin{lstlisting}[language=Python, caption=Ej1.py]
 from utils import *
 from numpy import *
@@ -164,7 +202,7 @@ from scipy.linalg import toeplitz
 from numpy.linalg import inv
 
 E = 32
-sigma = 10
+sigma = 0.1
 L = 5
 ganancia = 1/10
 h = ganancia*(1+randn(1,L))
@@ -248,50 +286,38 @@ yticks([])
 xticks([])
 title("Estimada")
 tight_layout()
-name = "E" + str(E) + "S" + str(sigma).replace('.','')
+name = "E" + str(E) + "S" + str(sigma)
 show()
-%\end{verbatim}
 \end{lstlisting}
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%
 \begin{lstlisting}[language=Python, caption=utils.py]
 import numpy as np
-def isSymmetric(a, tol=1e-8):
-    return np.allclose(a, a.transpose(), atol=tol)
-
-
-def isEqual(a,b, tol=1e-8):
-    return np.allclose(a, b, atol=tol)
-
-
-def is_pos_def(x):
-    return np.all(np.linalg.eigvals(x) > 0)
 
 def cholesky(a):
-    if isSymmetric(a) and is_pos_def(a):
-        w = len(a)
-        l = np.zeros((w,w)) # matriz de wxw
-        #sum1 y sum2 son las sumatorias de las formulas
-        sum1 = 0
-        sum2 = 0
-        #j es columna,i es fila
-        #como lo primero que termina una iteracion en el proceso son las filas
-        #entonces deben estar adentro del for de las columnas
-        for j in range(0, w):
-            for i in range(j, w):
-                if i == j: #formula para cuando i vale j
-                    for k in range(0, i):
-                        sum1 += (l[i][k]) ** 2
-                    l[i][i] = (a[i][i] - sum1) ** (1 / 2)
-                    sum1 = 0
-                else:     #formula para cuando i distinto j
-                    for k in range(0, j):
-                        sum2 += l[i][k]*l[j][k]
-                    l[i][j] = (a[i][j]-sum2)/(l[j][j])
-                    sum2 = 0
-        return l
-    else:
-        return None
+    #esta funcion asume que a es es semidefinida positiva y simetrica
+    #(esto esta justificado en el informe)
+    w = len(a)
+    l = np.zeros((w,w)) # matriz de wxw
+    #sum1 y sum2 son las sumatorias de las formulas
+    sum1 = 0
+    sum2 = 0
+    #j es columna,i es fila
+    #como lo primero que termina una iteracion en el proceso son las filas
+    #entonces deben estar adentro del for de las columnas
+    for j in range(0, w):
+        for i in range(j, w):
+            if i == j: #formula para cuando i vale j
+                for k in range(0, i):
+                    sum1 += (l[i][k]) ** 2
+                l[i][i] = (a[i][i] - sum1) ** (1 / 2)
+                sum1 = 0
+            else:     #formula para cuando i distinto j
+                for k in range(0, j):
+                    sum2 += l[i][k]*l[j][k]
+                l[i][j] = (a[i][j]-sum2)/(l[j][j])
+                sum2 = 0
+    return l
 
 def backSubs(u,y):
     # queremos resolver u x = y
