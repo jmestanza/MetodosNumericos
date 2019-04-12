@@ -6,7 +6,7 @@ from scipy.linalg import toeplitz
 from numpy.linalg import inv
 
 E = 32
-sigma = 10
+sigma = 0.1
 L = 5
 ganancia = 1/10
 h = ganancia*(1+randn(1,L))
@@ -90,7 +90,7 @@ yticks([])
 xticks([])
 title("Estimada")
 tight_layout()
-name = "E" + str(E) + "S" + str(sigma).replace('.','')
+name = "E" + str(E) + "S" + str(sigma)
 show()
 
 
