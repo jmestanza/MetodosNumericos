@@ -23,9 +23,66 @@ I_L=@(t,p)[
     (p=='c3')*10^4*(t>=20)
 ]
 
+% constantes
+f0 = 0.05;
+d_B = 0.7;
+Cs = 5*10^(-3);
+C = 0.0009127; %value reference (tablita)
+k3 = 5.8 * 10^(-4);
+k4 = 1.7 * 10^(-2);
+k0 = 0.35;
+K = 10;
+klp = 3*10^6;
+kop = 2*10^5;
+r_L = 10^3;
+k_P = 86;
+S_P = 250;
+k6 = 3;
+k5 = 0.02;
+
+P0 = S_P / k_P;
+Ps = k6 / k5;
+
+
+D_R = 7*10^(-14);
+D_B = f0 * d_B; 
+k_B = 0.189;
+D_C = 2.1*10^(-3);
+D_A = 0.7;
+R = 0.0007734;
+B = 0.0007282;
+
+
+pi_C = @(t,p)[
+    (C + f0 * Cs)/(C + Cs);
+];
+pi_p = @(t,p)[
+    (P_(t,p) + P0)/(P_(t,p) + Ps)
+];
+
+pi_L = @(t,p)[
+    (k3/k4)*((klp * pi_p(t,p) * B)/(1 + (k3*K/k4) + (k1/(k2*k0))*((kop/pi_p(t,p)*R + I_0(t,p) ))) * (1 + (I_L(t,p) /r_L));
+];
+P_ = @(t,p)[
+    I_P(t,p) / k_P;
+];
+
+
 f=@(t,y,p)[
     Dr*pi_C(t,p)-Db/pi_C(t,p)*R+I_R(t,p)
     Db/pi_C(t,p)*R-kB*B+I_B(t,p)
-    Dc*pi_l(t,p)-Da*pi_C(t,p)*C+I_C(t,p)
+    Dc*pi_L(t,p)-Da*pi_C(t,p)*C+I_C(t,p)
 ];
+
+miode(f, [R B C], 0, 140, 1, 10^-6,'a1')
+miode(f, [R B C], 0, 140, 1, 10^-6,'a2')
+miode(f, [R B C], 0, 140, 1, 10^-6,'a3')
+
+miode(f, [R B C], 0, 140, 1, 10^-6,'b1')
+miode(f, [R B C], 0, 140, 1, 10^-6,'b2')
+miode(f, [R B C], 0, 140, 1, 10^-6,'b3')
+
+miode(f, [R B C], 0, 140, 1, 10^-6,'c1')
+miode(f, [R B C], 0, 140, 1, 10^-6,'c2')
+miode(f, [R B C], 0, 140, 1, 10^-6,'c3')
 
