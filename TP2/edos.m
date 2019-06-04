@@ -61,7 +61,7 @@ pi_p = @(t,p)[
 ];
 
 pi_L = @(t,p)[
-    (k3/k4)*((klp * pi_p(t,p) * B)/(1 + (k3*K/k4) + (k1/(k2*k0))*((kop/pi_p(t,p)*R + I_0(t,p) ))) * (1 + (I_L(t,p) /r_L));
+    (k3/k4)*((klp * pi_p(t,p) * B)/(1 + (k3*K/k4) + (k1/(k2*k0))*((kop/pi_p(t,p)*R + I_0(t,p) ))) * (1 + (I_L(t,p) /r_L))
 ];
 P_ = @(t,p)[
     I_P(t,p) / k_P;
