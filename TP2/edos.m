@@ -1,16 +1,18 @@
+clear all;
+clc;
 
-I_R=@(t,p) (p=='a3')*(0.0001).*(20<=t && t<=80)+(p=='b3')*(-0.00012).*(20<=t && t<=80);
+I_R=@(t,p) strcmp(p,'a3')*(0.0001).*(20<=t && t<=80)+strcmp(p,'b3')*(-0.00012).*(20<=t && t<=80);
 
-I_B=@(t,p) (p=='a1')*(0.0001).*(20<=t && t<=80)+(p=='b1')*(-8.3*10^-5).*(20<=t && t<=80);
+I_B=@(t,p) strcmp(p,'a1')*(0.0001).*(20<=t && t<=80)+strcmp(p,'b1')*(-8.3*10^-5).*(20<=t && t<=80);
 
 
-I_C=@(t,p) (p=='a2')*(0.0001).*(20<=t && t<=80)+(p=='b2')*(-0.00029).*(20<=t && t <= 80);
+I_C=@(t,p) strcmp(p,'a2')*(0.0001).*(20<=t && t<=80)+strcmp(p,'b2')*(-0.00029).*(20<=t && t <= 80);
 
-I_P=@(t,p) (p=='c1')*(1000).*(20<=t && t<=80);
+I_P=@(t,p) strcmp(p,'c1')*(1000).*(20<=t && t<=80);
 
-I_0=@(t,p) (p=='c2')*(2.5*10^5).*(20<=t && t<= 80);
+I_0=@(t,p) strcmp(p,'c2')*(2.5*10^5).*(20<=t && t<= 80);
 
-I_L=@(t,p) (p=='c3')*(10^4).*(t>=20);
+I_L=@(t,p) strcmp(p,'c3')*(10^4).*(t>=20);
 
 
 % constantes
@@ -46,31 +48,40 @@ B = 0.0007282;
 
 
 pi_C = @(t,p) (C + f0 * Cs)/(C + Cs);
-
+P_ = @(t,p) I_P(t,p) / k_P;
 pi_p = @(t,p) (P_(t,p) + P0)/(P_(t,p) + Ps);
 
 
-pi_L = @(t,y,p) (k3/k4).*((klp .* pi_p(t,p) .* y(:,2))/(1 + (k3.*K/k4) + (k1/(k2.*k0)).*((kop/pi_p(t,p).*y(:,1) + I_0(t,p) )))) .* (1 + (I_L(t,p)/r_L));
+pi_L = @(t,y,p) (k3/k4)*((klp * pi_p(t,p) * y(2))/(1 + (k3*K/k4) + (k1/(k2*k0))*((kop/pi_p(t,p)*y(1) + I_0(t,p) )))) * (1 + (I_L(t,p)/r_L));
 
-P_ = @(t,p) I_P(t,p) / k_P;
+
 
 
 
 f=@(t,y,p)[
-    D_R*pi_C(t,p)-D_B/pi_C(t,p)*y(:,1)+I_R(t,p);
-    D_B/pi_C(t,p)*R-k_B*y(:,2)+I_B(t,p);
-    D_C*pi_L(t,y,p)-D_A*pi_C(t,p)*y(:,3)+I_C(t,p)
+    D_R*pi_C(t,p)-D_B/pi_C(t,p)*y(1)+I_R(t,p),D_B/pi_C(t,p)*R-k_B*y(2)+I_B(t,p),D_C*pi_L(t,y,p)-D_A*pi_C(t,p)*y(3)+I_C(t,p)
 ];
 
-miode(f, [R B C], 0, 140, 1, 10^-6,'a1')
-miode(f, [R B C], 0, 140, 1, 10^-6,'a2')
-miode(f, [R B C], 0, 140, 1, 10^-6,'a3')
+[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'a1');
+%subplot(2,1,1);
+plot(t, x)
 
-miode(f, [R B C], 0, 140, 1, 10^-6,'b1')
-miode(f, [R B C], 0, 140, 1, 10^-6,'b2')
-miode(f, [R B C], 0, 140, 1, 10^-6,'b3')
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'a2');
+%subplot(2,1,2);
+%plot(t,x)
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'a3');
+%plot(t,x)
 
-miode(f, [R B C], 0, 140, 1, 10^-6,'c1')
-miode(f, [R B C], 0, 140, 1, 10^-6,'c2')
-miode(f, [R B C], 0, 140, 1, 10^-6,'c3')
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'b1');
+%plot(t,x)
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'b2');
+%plot(t,x)
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'b3');
+%plot(t,x)
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'c1');
+%plot(t,x)
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'c2');
+%plot(t,x)
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'c3');
+%plot(t,x)
 
