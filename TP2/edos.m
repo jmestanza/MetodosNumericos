@@ -52,7 +52,7 @@ P_ = @(t,p) I_P(t,p) / k_P;
 pi_p = @(t,p) (P_(t,p) + P0)/(P_(t,p) + Ps);
 
 
-pi_L = @(t,y,p) (k3/k4)*((klp * pi_p(t,p) * y(2))/(1 + (k3*K/k4) + (k1/(k2*k0))*((kop/pi_p(t,p)*y(1) + I_0(t,p) )))) * (1 + (I_L(t,p)/r_L));
+pi_L = @(t,y,p) (k3/k4)*((klp * pi_p(t,p) * y(2))/(1 + (k3*K/k4) + (k1/(k2*k0))*(((kop/pi_p(t,p))*y(1)) + I_0(t,p) ))) * (1 + (I_L(t,p)/r_L));
 
 
 
