@@ -20,8 +20,7 @@ k1 = 10^(-2);
 k2 = 10;
 f0 = 0.05;
 d_B = 0.7;
-Cs = 5*10^(-3);
-C = 0.0009127; %value reference (tablita)
+Cs = 5*10^(-3); 
 k3 = 5.8 * 10^(-4);
 k4 = 1.7 * 10^(-2);
 k0 = 0.35;
@@ -38,16 +37,17 @@ P0 = S_P / k_P;
 Ps = k6 / k5;
 
 
-D_R = 7*10^(-14);
+D_R = 7*10^(-4);
 D_B = f0 * d_B; 
 k_B = 0.189;
 D_C = 2.1*10^(-3);
 D_A = 0.7;
 R = 0.0007734;
 B = 0.0007282;
+C = 0.0009127;
 
 
-pi_C = @(t,p) (C + f0 * Cs)/(C + Cs);
+pi_C = @(t,y,p) (y(3) + f0 * Cs)/(y(3) + Cs);
 P_ = @(t,p) I_P(t,p) / k_P;
 pi_p = @(t,p) (P_(t,p) + P0)/(P_(t,p) + Ps);
 
@@ -59,7 +59,7 @@ pi_L = @(t,y,p) (k3/k4)*((klp * pi_p(t,p) * y(2))/(1 + (k3*K/k4) + (k1/(k2*k0))*
 
 
 f=@(t,y,p)[
-    D_R*pi_C(t,p)-D_B/pi_C(t,p)*y(1)+I_R(t,p),D_B/pi_C(t,p)*R-k_B*y(2)+I_B(t,p),D_C*pi_L(t,y,p)-D_A*pi_C(t,p)*y(3)+I_C(t,p)
+    D_R*pi_C(t,y,p)-D_B/pi_C(t,y,p)*y(1)+I_R(t,p),D_B/pi_C(t,y,p)*R-k_B*y(2)+I_B(t,p),D_C*pi_L(t,y,p)-D_A*pi_C(t,y,p)*y(3)+I_C(t,p)
 ];
 
 [x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'a1');
