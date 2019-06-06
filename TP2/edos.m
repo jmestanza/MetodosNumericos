@@ -56,29 +56,35 @@ pi_L = @(t,y,p) (k3/k4)*((klp * pi_p(t,p) * y(2))/(1 + (k3*K/k4) + (k1/(k2*k0))*
 
 
 f=@(t,y,p)[
-    D_R*pi_C(t,y,p)-D_B/pi_C(t,y,p)*y(1)+I_R(t,p),D_B/pi_C(t,y,p)*R-k_B*y(2)+I_B(t,p),D_C*pi_L(t,y,p)-D_A*pi_C(t,y,p)*y(3)+I_C(t,p)
-];
+    D_R*pi_C(t,y,p)-(D_B/pi_C(t,y,p))*y(1)+I_R(t,p),D_B/pi_C(t,y,p)*y(1)-k_B*y(2)+I_B(t,p),D_C*pi_L(t,y,p)-D_A*pi_C(t,y,p)*y(3)+I_C(t,p)
+   ];
 
-[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'a1');
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-2,'a1');
 %subplot(2,1,1);
-plot(t, x)
+%plot(t, x)
 
 %[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'a2');
 %subplot(2,1,2);
 %plot(t,x)
-%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'a3');
+
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-4,'a3');
 %plot(t,x)
 
-%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'b1');
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-4,'b1');
 %plot(t,x)
-%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'b2');
+
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-4,'b2');
 %plot(t,x)
-%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'b3');
+
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-4,'b3');
 %plot(t,x)
-%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'c1');
+
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-4,'c1');
 %plot(t,x)
-%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'c2');
+
+%[x t] = miode(f, [R B C], 0, 140, 1, 10^-4,'c2');
 %plot(t,x)
-%[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'c3');
-%plot(t,x)
+
+[x t] = miode(f, [R B C], 0, 140, 1, 10^-4,'c3');
+plot(t,x)
 

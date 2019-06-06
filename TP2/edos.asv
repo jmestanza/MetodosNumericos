@@ -51,18 +51,15 @@ pi_C = @(t,y,p) (y(3) + f0 * Cs)/(y(3) + Cs);
 P_ = @(t,p) I_P(t,p) / k_P;
 pi_p = @(t,p) (P_(t,p) + P0)/(P_(t,p) + Ps);
 
-
 pi_L = @(t,y,p) (k3/k4)*((klp * pi_p(t,p) * y(2))/(1 + (k3*K/k4) + (k1/(k2*k0))*(((kop/pi_p(t,p))*y(1)) + I_0(t,p) ))) * (1 + (I_L(t,p)/r_L));
 
 
 
-
-
 f=@(t,y,p)[
-    D_R*pi_C(t,y,p)-D_B/pi_C(t,y,p)*y(1)+I_R(t,p),D_B/pi_C(t,y,p)*R-k_B*y(2)+I_B(t,p),D_C*pi_L(t,y,p)-D_A*pi_C(t,y,p)*y(3)+I_C(t,p)
-];
+    D_R*pi_C(t,y,p)-(D_B/pi_C(t,y,p))*y(1)+I_R(t,p),D_B/pi_C(t,y,p)*y(1)-k_B*y(2)+I_B(t,p),D_C*pi_L(t,y,p)-D_A*pi_C(t,y,p)*y(3)+I_C(t,p)
+   ];
 
-[x t] = miode(f, [R B C], 0, 140, 1, 10^-6,'a1');
+[x t] = miode(f, [R B C], 0, 140, 1, 10^-2,'a1');
 %subplot(2,1,1);
 plot(t, x)
 
