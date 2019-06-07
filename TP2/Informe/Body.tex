@@ -1,10 +1,15 @@
 \section{Introducci\'on}
 
-%Poner aca las edos
+Es interesante plantearse cu\'ado se requiere la utilizaci\'on de m\'etodos num\'ericos para la resolución de problemas, en este caso ecuaciones diferenciales ordinarias (en el tratado del presente trabajo). No sólo se las utiliza cuando las soluciones analíticas no pueden ser expresadas por las clásicas funciones fundamentales; sino que a su vez se tiene como ejemplo el paper del que se tomaron las EDOs que se estudian en este trabajo práctico, en donde se expone otra razón para la utilización de análisis numérico: a boca del propio autor, comenta que en el estado estacionario la solución analítica para encontrar la raíz consiste en más de 200 términos con los que realizar álgebra, haciéndolo engorroso en la práctica. Además pueden generar errores numéricos ligados a las operaciones algebraicas en representación de tipo float). Por ende, en este caso, se optó por encontrar las raíces de forma numérica, conociendo previamente que el sistema tiene un único punto fijo en la región local del espacio parametrizado explorado (Model Analysis and Simulation Results en el paper).
+Tras reconocer que Heun está contenido en el segundo orden de Runge-Kutta, resulta entonces como pregunta natural cuestionarse cuándo es conveniente parar de escalonar en el orden, es decir, cuándo la eficiencia empieza a bajar de manera mucho más marcada en contraposición a la precisión lograda. La respuesta en realidad depende de la naturaleza del problema. Pero como regla general (obviamente existen excepciones), es conveniente usar un orden mayor cuando se está muy limitado a errores de redondeo, porque mayor orden requiere menos pasos. Es decir, menos evaluaciones de funciones, cuentas, y demás). En este trabajo se usó Heun por consigna.
+
 
 \section{Implementaci\'on}
 
-%%%%%%%%%%%%%%%%%%%%%
+Sobre cuestiones ligadas a la implementación: se usó un método iterativo para encontrar el máximo error absoluto admisible. El mismo no es de los más eficientes que se pudieron haber implementado ya que, por ejemplo, podría haberse aumentado el orden de eficiencia realizando una búsqueda binaria para localizar un intervalo chico. Sin embargo, no se lo consider\'o algo que amerite demasiado trabajo de optimización, porque no logra una mejora sustancial y de esta forma el código resulta más legible, por lo que se eligió este último criterio.
+
+A continuaci\'on se presentan los c\'odigos implementados para obtener los gr\'aficos que se encuentran m\'as abajo.
+
 \begin{lstlisting}[language=Matlab, caption=heun.m]
 function [x t]=heun(f,x0,t0,tf,n,par)
     h=(tf-t0)/n;
@@ -120,6 +125,7 @@ plot(t,x)
 
 \section{Resultados}
 
+Aqu\'i se pueden observar gr\'aficamente las soluciones de las EDOs.
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.3]{../a1.png}\hspace{0.01cm}
