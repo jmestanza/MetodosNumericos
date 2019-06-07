@@ -1,0 +1,1271 @@
+This is LuaTeX, Version 1.0.0 (MiKTeX 2.9.6210)  (format=luatex 2019.6.6)  6 JUN 2019 22:57
+ restricted system commands enabled.
+**Informe.tex
+(./Informe.tex (./preamble.tex
+! Undefined control sequence.
+l.2 \documentclass
+                [paper=a4, fontsize=11pt]{scrartcl}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.5 \usepackage
+             {float}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.9 \usepackage
+             {multirow}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.13 \usepackage
+              [T1]{fontenc}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.14 \usepackage
+              {fourier}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.15 \usepackage
+              [utf8]{inputenc}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.16 \usepackage
+              [english]{babel}					% English language/hyphenation
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.18 \usepackage
+              [protrusion=true,expansion=true]{microtype}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.19 \usepackage
+              {amsmath,amsfonts,amsthm} % Math packages
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.20 \usepackage
+              [pdftex]{graphicx}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.21 \usepackage
+              {url} %SACO ESTO
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 \usepackage
+              {import}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.24 \usepackage
+              [margin=2cm]{geometry}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 \geometry
+            {verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headhei...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.27 \usepackage
+              {sectsty}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.28 \allsectionsfont
+                   {\normalfont \scshape}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.28 \allsectionsfont{\normalfont
+                                \scshape}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.28 \allsectionsfont{\normalfont \scshape
+                                        }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (41.35733pt too wide) in paragraph at lines 24--29
+[]\tenrm [mar-gin=2cm]ge-om-e-try ver-bose,tmar-gin=2cm,bmar-gin=2cm,lmar-gin=2
+cm,rmar-gin=2cm,head-height=2cm,head-|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x20.0, direction TLT
+.\tenrm [
+.\tenrm m
+.\tenrm a
+.etc.
+
+! Undefined control sequence.
+l.48 \numberwithin
+                {equation}{section}		% Equationnumbering: section.eq#
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.49 \numberwithin
+                {figure}{section}			% Figurenumbering: section.fig#
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.50 \numberwithin
+                {table}{section}				% Tablenumbering: section.tab#
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.54 \newcommand
+              {\horrule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.54 \newcommand{\horrule
+                       }[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.54 \newcommand{\horrule}[1]{\rule
+                                 {\linewidth}{#1}} 	% Horizontal rule
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.54 \newcommand{\horrule}[1]{\rule{\linewidth
+                                            }{#1}} 	% Horizontal rule
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.54 \newcommand{\horrule}[1]{\rule{\linewidth}{#
+                                               1}} 	% Horizontal rule
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.57 \usepackage
+              {graphicx}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.58 \usepackage
+              {color}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.59 \usepackage
+              [dvipsnames]{xcolor}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.60 \colorlet
+            {purple}{purple}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.64     \usepackage
+                  {geometry} % Required to change the page size to A4
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.65     \geometry
+                {a4paper} % Set the page size to be A4 as opposed to the def...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.67     \usepackage
+                  {mathtools, nccmath}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.72 \usepackage
+              {xcolor}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.76     \usepackage
+                  {tikz}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.77     \usetikzlibrary
+                      {matrix,calc}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.83 \newcommand
+              {\implicantsol}[3][0]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.83 \newcommand{\implicantsol
+                            }[3][0]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.84     \draw
+            [rounded corners=3pt, fill=#3, opacity=0.3] ($(#2.north west)+(1...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.84     \draw[rounded corners=3pt, fill=#
+                                        3, opacity=0.3] ($(#2.north west)+(1...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.84 ...nded corners=3pt, fill=#3, opacity=0.3] ($(#
+                                                  2.north west)+(135:#1)$) r...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.84 ...ll=#3, opacity=0.3] ($(#2.north west)+(135:#
+                                                  1)$) rectangle ($(#2.south...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.84 ... ($(#2.north west)+(135:#1)$) rectangle ($(#
+                                                  2.south east)+(-45:#1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.84 ...135:#1)$) rectangle ($(#2.south east)+(-45:#
+                                                  1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.93 \newcommand
+              {\implicant}[4][0]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.93 \newcommand{\implicant
+                         }[4][0]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.94     \draw
+            [rounded corners=3pt, fill=#4, opacity=0.3] ($(#2.north west)+(1...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.94     \draw[rounded corners=3pt, fill=#
+                                        4, opacity=0.3] ($(#2.north west)+(1...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.94 ...nded corners=3pt, fill=#4, opacity=0.3] ($(#
+                                                  2.north west)+(135:#1)$) r...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.94 ...ll=#4, opacity=0.3] ($(#2.north west)+(135:#
+                                                  1)$) rectangle ($(#3.south...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.94 ... ($(#2.north west)+(135:#1)$) rectangle ($(#
+                                                  3.south east)+(-45:#1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.94 ...135:#1)$) rectangle ($(#3.south east)+(-45:#
+                                                  1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.102 \newcommand
+               {\implicantcostats}[4][0]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.102 \newcommand{\implicantcostats
+                                 }[4][0]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.103     \draw
+             [rounded corners=3pt, fill=#4, opacity=0.3] ($(rf.east |- #2.no...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.103     \draw[rounded corners=3pt, fill=#
+                                         4, opacity=0.3] ($(rf.east |- #2.no...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.103 ...=3pt, fill=#4, opacity=0.3] ($(rf.east |- #
+                                                  2.north)+(90:#1)$)-| ($(#2...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.103 ... opacity=0.3] ($(rf.east |- #2.north)+(90:#
+                                                  1)$)-| ($(#2.east)+(0:#1)$...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.103 ...3] ($(rf.east |- #2.north)+(90:#1)$)-| ($(#
+                                                  2.east)+(0:#1)$) |- ($(rf....
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.103 ...t |- #2.north)+(90:#1)$)-| ($(#2.east)+(0:#
+                                                  1)$) |- ($(rf.east |- #3.s...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.103 ...)-| ($(#2.east)+(0:#1)$) |- ($(rf.east |- #
+                                                  3.south)+(-90:#1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.103 ...+(0:#1)$) |- ($(rf.east |- #3.south)+(-90:#
+                                                  1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.104     \draw
+             [rounded corners=3pt, fill=#4, opacity=0.3] ($(cf.west |- #2.no...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.104     \draw[rounded corners=3pt, fill=#
+                                         4, opacity=0.3] ($(cf.west |- #2.no...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.104 ...=3pt, fill=#4, opacity=0.3] ($(cf.west |- #
+                                                  2.north)+(90:#1)$) -| ($(#...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.104 ... opacity=0.3] ($(cf.west |- #2.north)+(90:#
+                                                  1)$) -| ($(#3.west)+(180:#...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.104 ...] ($(cf.west |- #2.north)+(90:#1)$) -| ($(#
+                                                  3.west)+(180:#1)$) |- ($(c...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.104 ...- #2.north)+(90:#1)$) -| ($(#3.west)+(180:#
+                                                  1)$) |- ($(cf.west |- #3.s...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.104 ...| ($(#3.west)+(180:#1)$) |- ($(cf.west |- #
+                                                  3.south)+(-90:#1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.104 ...180:#1)$) |- ($(cf.west |- #3.south)+(-90:#
+                                                  1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.112 \newcommand
+               {\implicantdaltbaix}[4][0]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.112 \newcommand{\implicantdaltbaix
+                                  }[4][0]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.113     \draw
+             [rounded corners=3pt, fill=#4, opacity=0.3] ($(cf.south -| #2.w...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.113     \draw[rounded corners=3pt, fill=#
+                                         4, opacity=0.3] ($(cf.south -| #2.w...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.113 ...3pt, fill=#4, opacity=0.3] ($(cf.south -| #
+                                                  2.west)+(180:#1)$) |- ($(#...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.113 ...opacity=0.3] ($(cf.south -| #2.west)+(180:#
+                                                  1)$) |- ($(#2.south)+(-90:...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.113 ... ($(cf.south -| #2.west)+(180:#1)$) |- ($(#
+                                                  2.south)+(-90:#1)$) -| ($(...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.113 ... #2.west)+(180:#1)$) |- ($(#2.south)+(-90:#
+                                                  1)$) -| ($(cf.south -| #3....
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.113 ...($(#2.south)+(-90:#1)$) -| ($(cf.south -| #
+                                                  3.east)+(0:#1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.113 ...+(-90:#1)$) -| ($(cf.south -| #3.east)+(0:#
+                                                  1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.114     \draw
+             [rounded corners=3pt, fill=#4, opacity=0.3] ($(rf.north -| #2.w...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.114     \draw[rounded corners=3pt, fill=#
+                                         4, opacity=0.3] ($(rf.north -| #2.w...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.114 ...3pt, fill=#4, opacity=0.3] ($(rf.north -| #
+                                                  2.west)+(180:#1)$) |- ($(#...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.114 ...opacity=0.3] ($(rf.north -| #2.west)+(180:#
+                                                  1)$) |- ($(#3.north)+(90:#...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.114 ... ($(rf.north -| #2.west)+(180:#1)$) |- ($(#
+                                                  3.north)+(90:#1)$) -| ($(r...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.114 ...| #2.west)+(180:#1)$) |- ($(#3.north)+(90:#
+                                                  1)$) -| ($(rf.north -| #3....
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.114 ... ($(#3.north)+(90:#1)$) -| ($(rf.north -| #
+                                                  3.east)+(0:#1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.114 ...)+(90:#1)$) -| ($(rf.north -| #3.east)+(0:#
+                                                  1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.120 \newcommand
+               {\implicantcantons}[2][0]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.120 \newcommand{\implicantcantons
+                                 }[2][0]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.121     \draw
+             [rounded corners=3pt, opacity=.3] ($(rf.east |- 0.south)+(-90:#...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in math mode.
+l.121 ..., opacity=.3] ($(rf.east |- 0.south)+(-90:#
+                                                  1)$) -| ($(0.east |- cf.so...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.121 ...)+(-90:#1)$) -| ($(0.east |- cf.south)+(0:#
+                                                  1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.122     \draw
+             [rounded corners=3pt, opacity=.3] ($(rf.east |- 8.north)+(90:#1...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in math mode.
+l.122 ...t, opacity=.3] ($(rf.east |- 8.north)+(90:#
+                                                  1)$) -| ($(8.east |- rf.no...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.122 ...h)+(90:#1)$) -| ($(8.east |- rf.north)+(0:#
+                                                  1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.123     \draw
+             [rounded corners=3pt, opacity=.3] ($(cf.west |- 2.south)+(-90:#...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in math mode.
+l.123 ..., opacity=.3] ($(cf.west |- 2.south)+(-90:#
+                                                  1)$) -| ($(2.west |- cf.so...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.123 ...(-90:#1)$) -| ($(2.west |- cf.south)+(180:#
+                                                  1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.124     \draw
+             [rounded corners=3pt, opacity=.3] ($(cf.west |- 10.north)+(90:#...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in math mode.
+l.124 ..., opacity=.3] ($(cf.west |- 10.north)+(90:#
+                                                  1)$) -| ($(10.west |- rf.n...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.124 ...(90:#1)$) -| ($(10.west |- rf.north)+(180:#
+                                                  1)$);
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.125     \fill
+             [rounded corners=3pt, fill=#2, opacity=.3] ($(rf.east |- 0.sout...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.125     \fill[rounded corners=3pt, fill=#
+                                         2, opacity=.3] ($(rf.east |- 0.sout...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.125 ..., opacity=.3] ($(rf.east |- 0.south)+(-90:#
+                                                  1)$) -|  ($(0.east |- cf.s...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.125 ...+(-90:#1)$) -|  ($(0.east |- cf.south)+(0:#
+                                                  1)$) [sharp corners] ($(rf...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.125 ...harp corners] ($(rf.east |- 0.south)+(-90:#
+                                                  1)$) |-  ($(0.east |- cf.s...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.125 ...+(-90:#1)$) |-  ($(0.east |- cf.south)+(0:#
+                                                  1)$) ;
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.126     \fill
+             [rounded corners=3pt, fill=#2, opacity=.3] ($(rf.east |- 8.nort...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.126     \fill[rounded corners=3pt, fill=#
+                                         2, opacity=.3] ($(rf.east |- 8.nort...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.126 ...2, opacity=.3] ($(rf.east |- 8.north)+(90:#
+                                                  1)$) -| ($(8.east |- rf.no...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.126 ...h)+(90:#1)$) -| ($(8.east |- rf.north)+(0:#
+                                                  1)$) [sharp corners] ($(rf...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.126 ...sharp corners] ($(rf.east |- 8.north)+(90:#
+                                                  1)$) |- ($(8.east |- rf.no...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.126 ...h)+(90:#1)$) |- ($(8.east |- rf.north)+(0:#
+                                                  1)$) ;
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.127     \fill
+             [rounded corners=3pt, fill=#2, opacity=.3] ($(cf.west |- 2.sout...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.127     \fill[rounded corners=3pt, fill=#
+                                         2, opacity=.3] ($(cf.west |- 2.sout...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.127 ..., opacity=.3] ($(cf.west |- 2.south)+(-90:#
+                                                  1)$) -| ($(2.west |- cf.so...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.127 ...(-90:#1)$) -| ($(2.west |- cf.south)+(180:#
+                                                  1)$) [sharp corners]($(cf....
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.127 ...sharp corners]($(cf.west |- 2.south)+(-90:#
+                                                  1)$) |- ($(2.west |- cf.so...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.127 ...(-90:#1)$) |- ($(2.west |- cf.south)+(180:#
+                                                  1)$) ;
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.128     \fill
+             [rounded corners=3pt, fill=#2, opacity=.3] ($(cf.west |- 10.nor...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.128     \fill[rounded corners=3pt, fill=#
+                                         2, opacity=.3] ($(cf.west |- 10.nor...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.128 ..., opacity=.3] ($(cf.west |- 10.north)+(90:#
+                                                  1)$) -| ($(10.west |- rf.n...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.128 ...(90:#1)$) -| ($(10.west |- rf.north)+(180:#
+                                                  1)$) [sharp corners] ($(cf...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.128 ...harp corners] ($(cf.west |- 10.north)+(90:#
+                                                  1)$) |- ($(10.west |- rf.n...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.128 ...(90:#1)$) |- ($(10.west |- rf.north)+(180:#
+                                                  1)$) ;
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.132 \newenvironment
+                   {Karnaugh}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.134 \begin
+          {tikzpicture}[baseline=(current bounding box.north),scale=0.8]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.135 \draw
+          (0,0) grid (4,4);
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.136 \draw
+          (0,4) -- node [pos=0.7,above right,anchor=south west] {y2 y1} node...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+$
+<to be read again> 
+\mskip 
+\,->\mskip 
+           \thinmuskip 
+\matrix #1->\null \,
+                    \vcenter {\normalbaselines \m@th \ialign {\hfil $##$\hfi...
+l.138 \matrix (
+             mapa) [matrix of nodes,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+\par 
+<to be read again> 
+}
+l.151 }
+     ;
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+ |(r00)| 00 \& |(0)| \phantom {0} \& |(1)| \phantom {0} \& |(3)| \phantom \ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+\par 
+<to be read again> 
+}
+l.151 }
+     ;
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+$
+<to be read again> 
+\par 
+<to be read again> 
+}
+l.151 }
+     ;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+}
+<to be read again> 
+$
+<to be read again> 
+\par 
+<to be read again> 
+}
+l.151 }
+     ;
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (3.69049pt too wide) in paragraph at lines 132--151
+\tenrm [pos=0.7,above right,an-chor=south west] y2 y1 node [pos=0.75,be-low lef
+t,an-chor=north east] w y3 ++(135:1);|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0, direction TLT
+.\tenrm [
+.\tenrm p
+.\kern0.27779
+.\tenrm o
+.\tenrm s
+.etc.
+
+
+Overfull \hbox (36.00371pt too wide) in paragraph at lines 132--151
+[]$ [] \teni mapa\tenrm )[\teni matrixofnodes; columnsep \tenrm = []\teni ; row
+sep \tenrm = []\teni ; everynode=:style \tenrm =|
+
+\hbox(7.5+2.5)x469.75499, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\mathon
+.\glue 1.66663
+.\vbox(7.5+2.5)x3.8889, direction TLT
+..\hbox(7.5+2.5)x3.8889, direction TLT
+...\glue(\tabskip) 0.0
+...\hbox(7.5+2.5)x3.8889, glue set 1.94446fil, direction TLT []
+...\glue(\tabskip) 0.0
+..\kern -12.0
+..\glue(\baselineskip) 2.0
+..\hbox(7.5+2.5)x3.8889, direction TLT
+...\glue(\tabskip) 0.0
+...\hbox(7.5+2.5)x3.8889, direction TLT []
+...\glue(\tabskip) 0.0
+..\glue(\baselineskip) 2.0
+..etc.
+.\glue 1.66663
+.etc.
+
+
+Overfull \hbox (123.68472pt too wide) in paragraph at lines 132--151
+[]\teni ; anchor \tenrm = 8\teni :center; ampersandreplacement \tenrm = &]\teni
+ at\tenrm (0\teni :\tenrm 5\teni ; \tenrm 0\teni :\tenrm 5)[]$ |
+
+\hbox(7.5+2.5)x469.75499, direction TLT
+.\hbox(6.59525+0.0)x106.5081, direction TLT
+..\teni m
+..\teni i
+..\teni n
+..\teni i
+..\teni m
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni a
+.\teni n
+.etc.
+
+! Too many }'s.
+l.152 }
+     %
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+[1{C:/Users/Male/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]))
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 153 ({)
+### bottom level<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb>
+Output written on Informe.pdf (1 page, 44814 bytes).
+
+PDF statistics: 18 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+

@@ -1,14 +1,24 @@
-\section{Introducci\'on}
+\section{Resumen}
 
-Es interesante plantearse cu\'ado se requiere la utilizaci\'on de m\'etodos num\'ericos para la resolución de problemas, en este caso ecuaciones diferenciales ordinarias (en el tratado del presente trabajo). No sólo se las utiliza cuando las soluciones analíticas no pueden ser expresadas por las clásicas funciones fundamentales; sino que a su vez se tiene como ejemplo el paper del que se tomaron las EDOs que se estudian en este trabajo práctico, en donde se expone otra razón para la utilización de análisis numérico: a boca del propio autor, comenta que en el estado estacionario la solución analítica para encontrar la raíz consiste en más de 200 términos con los que realizar álgebra, haciéndolo engorroso en la práctica. Además pueden generar errores numéricos ligados a las operaciones algebraicas en representación de tipo float). Por ende, en este caso, se optó por encontrar las raíces de forma numérica, conociendo previamente que el sistema tiene un único punto fijo en la región local del espacio parametrizado explorado (Model Analysis and Simulation Results en el paper).
-Tras reconocer que Heun está contenido en el segundo orden de Runge-Kutta, resulta entonces como pregunta natural cuestionarse cuándo es conveniente parar de escalonar en el orden, es decir, cuándo la eficiencia empieza a bajar de manera mucho más marcada en contraposición a la precisión lograda. La respuesta en realidad depende de la naturaleza del problema. Pero como regla general (obviamente existen excepciones), es conveniente usar un orden mayor cuando se está muy limitado a errores de redondeo, porque mayor orden requiere menos pasos. Es decir, menos evaluaciones de funciones, cuentas, y demás). En este trabajo se usó Heun por consigna.
+	\hspace{1cm}Es interesante plantearse cu\'ado se requiere la utilizaci\'on de m\'etodos num\'ericos para la resolución de problemas, en este caso ecuaciones diferenciales ordinarias (en el tratado del presente trabajo). No sólo se las utiliza cuando las soluciones analíticas no pueden ser expresadas por las clásicas funciones fundamentales; sino que a su vez se tiene como ejemplo el paper del que se tomaron las EDOs que se estudian en este trabajo práctico, en donde se expone otra razón para la utilización de análisis numérico: a boca del propio autor, comenta que en el estado estacionario la solución analítica para encontrar la raíz consiste en más de 200 términos con los que realizar álgebra, haciéndolo engorroso en la práctica. Además pueden generar errores numéricos ligados a las operaciones algebraicas en representación de tipo float). Por ende, en este caso, se optó por encontrar las raíces de forma numérica, conociendo previamente que el sistema tiene un único punto fijo en la región local del espacio parametrizado explorado (Model Analysis and Simulation Results en el paper).
+
+\hspace{1cm}Tras reconocer que Heun está contenido en el segundo orden de Runge-Kutta, resulta entonces como pregunta natural cuestionarse cuándo es conveniente parar de escalonar en el orden, es decir, cuándo la eficiencia empieza a bajar de manera mucho más marcada en contraposición a la precisión lograda. La respuesta en realidad depende de la naturaleza del problema. Pero como regla general (obviamente existen excepciones), es conveniente usar un orden mayor cuando se está muy limitado a errores de redondeo, porque mayor orden requiere menos pasos. Es decir, menos evaluaciones de funciones, cuentas, y demás). En este trabajo se usó Heun por consigna.
+
+\hspace{1cm}Se comenta brevemente la manera de aproximar de Heun, que se ve reflejada los código m\'as adelante. La misma es un modelo superador de Euler, de mayor precisión. Euler lo que hace es tomar la línea tangente a la función al principio del intervalo asumiendo que el paso es suficientemente chico como para aproximar a la tangente. Sin embargo, aún cuando el paso sea verdaderamente muy chico, el error se va acumulando en muchos casos considerablemente. Heun considera las líneas tangentes a la curva solución en ambos puntos que limitan el intervalo, uno que subestima y otro que sobreestima la coordenada vertical ideal, y sobre ellos realiza una ponderación equitativa. En el propio método se nota que la piedra fundacional del algoritmo está emprendida por Euler como pionero.
+
+\hspace{1cm}Bas\'andonos en el desarrollo num\'erico del art\'iculo de \textit{Lemaire et al. [1]: "Modeling the interactions between osteoblast and osteoclast activities in bone remodeling" }, en este trabajo se resuelven las siguientes ecuaciones diferenciales ordinarias implementando el m\'etodo de Heun.
+$$ \frac{dR}{dt} = D_R . \pi_C - \frac{D_B}{\pi_C} . R + I_R$$
+$$ \frac{dB}{dt} = \frac{D_B}{\pi_C} . R - k_B . B + I_B$$
+$$ \frac{dC}{dt} = D_C . \pi_L - D_A . \pi_C . C + I_C$$
+
+\hspace{1cm}Las constantes de estas ecuaciones se encuentran especificadas en el Paper mencionado. A partir de estas tres ecuaciones diferenciales ordinarias, se graficaron nueve figuras 	que cumplen con los par\'ametros especificados en el enunciado de la consigna del presente trabajo pr\'actico.
 
 
 \section{Implementaci\'on}
 
-Sobre cuestiones ligadas a la implementación: se usó un método iterativo para encontrar el máximo error absoluto admisible. El mismo no es de los más eficientes que se pudieron haber implementado ya que, por ejemplo, podría haberse aumentado el orden de eficiencia realizando una búsqueda binaria para localizar un intervalo chico. Sin embargo, no se lo consider\'o algo que amerite demasiado trabajo de optimización, porque no logra una mejora sustancial y de esta forma el código resulta más legible, por lo que se eligió este último criterio.
+\hspace{1cm}Sobre cuestiones ligadas a la implementación: se usó un método iterativo para encontrar el máximo error absoluto admisible. El mismo no es de los más eficientes que se pudieron haber implementado ya que, por ejemplo, podría haberse aumentado el orden de eficiencia realizando una búsqueda binaria para localizar un intervalo chico. Sin embargo, no se lo consider\'o algo que amerite demasiado trabajo de optimización, porque no logra una mejora sustancial y de esta forma el código resulta más legible, por lo que se eligió este último criterio.
 
-A continuaci\'on se presentan los c\'odigos implementados para obtener los gr\'aficos que se encuentran m\'as abajo.
+\hspace{1cm}A continuaci\'on se presentan los c\'odigos implementados para obtener los gr\'aficos que se encuentran m\'as abajo.
 
 \begin{lstlisting}[language=Matlab, caption=heun.m]
 function [x t]=heun(f,x0,t0,tf,n,par)
@@ -125,18 +135,21 @@ plot(t,x)
 
 \section{Resultados}
 
-Aqu\'i se pueden observar gr\'aficamente las soluciones de las EDOs.
+\hspace{1cm}Aqu\'i se pueden observar gr\'aficamente las soluciones de las EDOs, como se mencion\'o previamente. Sus nombres $a1, a2, a3, b1, b2, b3, c1, c2 y c3$ son consistentes con las indicaciones de los par\'ametros presentes en la consigna del trabajo pr\'actico.
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.3]{../a1.png}\hspace{0.01cm}
 \includegraphics[scale=0.3]{../b1.png}\hspace{0.01cm}
 \includegraphics[scale=0.3]{../c1.png}\\
+\caption{Figuras $a1, b1 y c1$ respectivamente.}
 \includegraphics[scale=0.3]{../a2.png}\hspace{0.01cm}
 \includegraphics[scale=0.3]{../b2.png}\hspace{0.01cm}
 \includegraphics[scale=0.3]{../c2.png}\\
+\caption{Figuras $a2, b2 y c2$ respectivamente.}
 \includegraphics[scale=0.3]{../a3.png}\hspace{0.01cm}
 \includegraphics[scale=0.3]{../b3.png}\hspace{0.01cm}
 \includegraphics[scale=0.3]{../c3.png}
+\caption{Figuras $a3, b3 y c3$ respectivamente.}
 \caption{Resultados de las EDOs.}
 \label{circnpnmaxout}
 \end{figure}
